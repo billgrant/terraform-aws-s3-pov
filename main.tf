@@ -1,4 +1,13 @@
 terraform {
+  cloud {
+    # Change this to your organization name
+    organization = "org-name"
+
+    workspaces {
+    # change this to your workspace name
+      name = "workspace-name"
+    }
+  }
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -12,7 +21,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "example" {
   tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
+    Name        = var.name
+    Environment = var.environment
   }
 }

@@ -1,13 +1,13 @@
 terraform {
-  cloud {
-    # Change this to your organization name
-    organization = "org-name"
+  # cloud {
+  #   # Change this to your organization name
+  #   organization = "billgrant"
 
-    workspaces {
-    # change this to your workspace name
-      name = "workspace-name"
-    }
-  }
+  #   workspaces {
+  #   # change this to your workspace name
+  #     name = "ravi-cli"
+  #   }
+  # }
   required_providers {
     aws = {
       source = "hashicorp/aws"
